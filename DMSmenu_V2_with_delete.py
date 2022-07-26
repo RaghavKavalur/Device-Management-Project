@@ -40,7 +40,7 @@ def delete_function(string):
                         f2.write(line)
         print("The device has been deleted")
     except:
-        print("Oops! something error")
+        print("Oops! something went wrong")
 #Update function by NEIL
 def update_function(string):
     with open("devicelist.txt", 'r+') as f:
