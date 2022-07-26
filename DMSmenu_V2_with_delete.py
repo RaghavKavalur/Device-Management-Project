@@ -30,23 +30,21 @@ def add_function():
                 msg == "No" or "NO"
             print(fileList)
 def delete_function(string):
-    try:
-        with open('devicelist.txt', 'r') as f1:
-            delete = string
-            lines = f1.readlines()
-            with open("devicelist.txt", 'w') as f2:
-                for line in lines:
-                    if line.strip('\n') != delete:
-                        f2.write(line)
+    delete = string
+    with open("devicelist.txt", "r") as fp:
+        lines = fp.readlines()
+
+    with open("devicelist.txt", "w") as fp:
+        for line in lines:
+            if line.strip("\n") != delete:
+                fp.write(line)
         print("The device has been deleted")
-    except:
-        print("Oops! something went wrong")
 #Update function by NEIL
 def update_function(string):
     with open("devicelist.txt", 'r+') as f:
         text1 = string
         text = f.read()
-        update = str(input('The update device is: '))
+        update = input('The update device is: ')
         text = re.sub(text1,update,text)
         f.seek(0)
         f.write(text)
@@ -54,7 +52,7 @@ def update_function(string):
         print('The device is updated')
 
 def main():
-    file1 = open("devicelist.txt")
+    # file1 = open("devicelist.txt")
     ans = 'y'                       #ruby - main, repetition, compiling all functions
     print('Welcome to the Device Management System')
     print('1.	view all devices')  #Raghav, github (OK)
@@ -78,6 +76,7 @@ def main():
             string1 = input("Enter full device info to be deleted: ")
             flag = 0
             index = 0
+            file1 = open("devicelist.txt")
             for line in file1:
                 index += 1
                 if string1 in line:
@@ -94,6 +93,7 @@ def main():
             string1 = input("Enter full device info to be updated: ")
             flag = 0
             index = 0
+            file1 = open("devicelist.txt")
             for line in file1:
                 index += 1
                 if string1 in line:
@@ -112,5 +112,4 @@ def main():
             ans = input('Do you want to continue?(y/n):')
     else:
         print('\nTHANKS FOR USING PYTEAM\'S DEVICE MANAGEMENT SYSTEM..Bye!')
-    file1.close()
 main()
