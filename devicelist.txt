@@ -1,0 +1,9 @@
+ThinkSystem SN550
+ThinkSystem AN151
+PowerEdge R242
+PowerEdge T642
+HPE ProLiant DL385 
+HPE ProLiant ML353 
+DELL D123
+IPHONE MI12
+TOSHI TS222
