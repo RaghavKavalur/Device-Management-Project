@@ -52,7 +52,6 @@ def update_function(string):
         print('The device is updated')
 
 def main():
-    # file1 = open("devicelist.txt")
     ans = 'y'                       #ruby - main, repetition, compiling all functions
     print('Welcome to the Device Management System')
     print('1.	view all devices')  #Raghav, github (OK)
@@ -71,7 +70,7 @@ def main():
             add_function()
             ans = input('Do you want to continue?(y/n):')
         elif option == 3:
-            print('====>>> execute DELETE function here')
+            print('DELETING A DEVICE')
             view_function()
             string1 = input("Enter full device info to be deleted: ")
             flag = 0
@@ -88,7 +87,7 @@ def main():
                 delete_function(string1)
             ans = input('Do you want to continue?(y/n):')
         elif option == 4:
-            print('UPDATING DEVICE from below...')
+            print('UPDATING DEVICE')
             view_function()     #Update function by NEIL
             string1 = input("Enter full device info to be updated: ")
             flag = 0
