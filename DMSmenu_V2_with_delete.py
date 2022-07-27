@@ -29,6 +29,7 @@ def add_function():
             else:
                 msg == "No" or "NO"
             print(fileList)
+#delete function by Hetvi
 def delete_function(string):
     delete = string
     with open("devicelist.txt", "r") as fp:
